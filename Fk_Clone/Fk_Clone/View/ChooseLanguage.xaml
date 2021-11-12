@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fk_Clone.View.ChooseLanguage"
+             Title="Choose Language"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="0" >
+                <StackLayout>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5" CornerRadius="10">
+                        <RadioButton Content="Tamil" BackgroundColor="Black" GroupName="language"/>
+                    </Frame>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5" CornerRadius="10">
+                        <RadioButton Content="Marati" BackgroundColor="Black" GroupName="language"/>
+                    </Frame>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5" CornerRadius="10">
+                        <RadioButton Content="Hindi" BackgroundColor="Black" GroupName="language"/>
+                    </Frame>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5" CornerRadius="10">
+                        <RadioButton Content="Malayalam" BorderColor="red" BackgroundColor="Black" GroupName="language"/>
+                    </Frame>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5" CornerRadius="10">
+                        <RadioButton Content="Kannada" BackgroundColor="Black" GroupName="language"/>
+                    </Frame>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5" CornerRadius="10">
+                        <RadioButton Content="Telugu" BackgroundColor="Black" GroupName="language"/>
+                    </Frame>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5" CornerRadius="10">
+                        <RadioButton Content="Kanada" BackgroundColor="Black" GroupName="language"/>                    
+                    </Frame>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5" CornerRadius="10">
+                        <RadioButton Content="Punjabi" BackgroundColor="Black" GroupName="language"/>
+                    </Frame>
+                    <Frame BackgroundColor="Black" BorderColor="gray" Margin="10,5,10,20" CornerRadius="10">
+                        <RadioButton Content="English"  BackgroundColor="Black" GroupName="language"/>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <Button   Margin="0,0,0,-5" Text="Continue" TextColor="white" VerticalOptions="EndAndExpand"/>
+        </Grid>        
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿ <?xml. version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lvm="clr-namespace:Fk_Clone.ViewModel"
+             x:Class="Fk_Clone.View.LoginPage"
+             BackgroundColor="Black"             
+             Title="Flipkart">
+    <ContentPage.BindingContext>
+        <lvm:LoginVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content >
+        <StackLayout>
+            <!-- android:Entry.ImeOptions="Send"-->
+            <Label Text="Login For the Best experience " FontAttributes="Bold" TextColor="White" Margin="20,30,20,10" FontSize="18"/>
+            <Label Text="Experience the all new Flipkart!" TextColor="White" Margin="20,5,20,20" FontSize="15"/>
+            <Frame BackgroundColor="Black" BorderColor="White"  CornerRadius="10" Padding="5" Margin="15,0" IsVisible="{Binding Withnum}">
+                <Entry Placeholder="+91" PlaceholderColor="white" TextColor="White" Keyboard="Numeric" Text="{Binding Phone_Number}" MaxLength="10" />
+            </Frame>
+            <Frame BackgroundColor="Black" BorderColor="White" CornerRadius="10" Padding="5" Margin="15,0" IsVisible="{Binding Withmail}">
+                <Entry Placeholder="E-Mail ID " PlaceholderColor="white" TextColor="White" Keyboard="Email" Text="{Binding Mail}"/>
+            </Frame>
+            <Button BackgroundColor="Black"  TextColor="CornflowerBlue" Text="{Binding Options}" Command="{Binding changelogin}" HorizontalOptions="EndAndExpand"/>
+            <Label FontSize="17">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="By continuing, you agree to Flipkart's " TextColor="White"/>
+                        <Span Text="Terms of Use" TextColor="CornflowerBlue"/>
+                        <Span Text=" and " TextColor="white"/>
+                        <Span Text="Privacy Policy" TextColor="CornflowerBlue"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Image Source="free_delivery.png" Margin="0,40"/>
+            <Button Text="Continue" BackgroundColor="LightGray" TextColor="Black" VerticalOptions="EndAndExpand" Command="{Binding continue_button}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

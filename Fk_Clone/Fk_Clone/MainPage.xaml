@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:bind="clr-namespace:Fk_Clone.View"
+             xmlns:bind1="clr-namespace:Fk_Clone.ViewModel"      
+             x:Class="Fk_Clone.MainPage"
+             BackgroundColor="Black"
+             Title="Flipkart">
+    <Shell.BindingContext>
+        <bind1:MainPageVM/>
+    </Shell.BindingContext>
+    <Shell.ToolbarItems>
+        <ToolbarItem IconImageSource="mycart.png"/>
+        <ToolbarItem IconImageSource="notification.png"/>
+    </Shell.ToolbarItems>    
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" FlyoutItemIsVisible="False" >
+        <Tab Title="Shop">
+            <ShellContent Title="Shop" Icon="icon.png" ContentTemplate="{DataTemplate bind:Shop}"/>
+        </Tab>
+        <Tab Title="SuperCoin"  >
+            <ShellContent Title="SuperCoin" ContentTemplate="{DataTemplate bind:SuperCoin}"/>
+        </Tab>
+        <Tab>
+            <ShellContent />
+        </Tab>
+        <Tab Title="Credit">
+            <ShellContent Title="Credit" ContentTemplate="{DataTemplate bind:Credit}"/>
+        </Tab>
+        <Tab Title="Quick">
+            <ShellContent Title="Quick" ContentTemplate="{DataTemplate bind:Quick}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" >
+        <ShellContent Title="All Categories" Icon="category_logo.png" ContentTemplate="{DataTemplate bind:Allcategories}" />
+        <ShellContent Title="More on Fk" Icon="more1_icon.png" ContentTemplate="{DataTemplate bind:MoreOnFk}" />
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Choose Language" Icon="language.png" ContentTemplate="{DataTemplate bind:ChooseLanguage}"/>
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" FlyoutItemIsVisible="True">
+        <ShellContent Title="My Orders"  Icon="order.png" ContentTemplate="{DataTemplate bind:Orders}"/>
+        <ShellContent Title="My Rewards" Icon="rewards.png" ContentTemplate="{DataTemplate bind:Rewards}"/>
+        <ShellContent Title="My Cart"  Icon="mycart.png" ContentTemplate="{DataTemplate bind:MyCart}" />
+        <ShellContent Title="My Wishlist" Icon="wishlist.png" ContentTemplate="{DataTemplate bind:Wishlist}"/>
+        <ShellContent Title="My Account" Icon="My_account.png" ContentTemplate="{DataTemplate bind:MyAccount}" />
+        <ShellContent Title="My Notifications" Icon="notification.png" ContentTemplate="{DataTemplate bind:MyNotifications}"  />
+        <ShellContent Title="My Chats" Icon="chat.png" ContentTemplate="{DataTemplate bind:MyChats}" />
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" >
+        <ShellContent Title="Legal" ContentTemplate="{DataTemplate bind:LegalPolicy}"/>
+    </FlyoutItem>
+    <Shell.FlyoutHeader>
+        <StackLayout Orientation="Horizontal" BackgroundColor="Black" >
+            <Image Source="House.png" WidthRequest="25" Margin="0,20">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Home_button}"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="Home" TextColor="White" Margin="20,20" FontSize="25" FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Home_button}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Image Source="fk_logo.png" WidthRequest="25" HorizontalOptions="EndAndExpand" Margin="10,20">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Home_button}"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+</Shell>

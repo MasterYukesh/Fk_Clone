@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fk_Clone.View.MyReviews"
+            Title="My Reviews"
+            BackgroundColor="Black"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.IsSwipePagingEnabled="False">
+    <TabbedPage Title="Pending">
+        <ContentPage>
+            <StackLayout>
+                <Image Source="edit_icon.png" WidthRequest="100" Margin="0,30,0,20"/>
+                <Label Text="Yay! No Pending reviews" TextColor="DarkGray" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+                <Label Text="You have no products to review right now" TextColor="Gray" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage>
+    <TabbedPage Title="Pending">
+        <ContentPage>
+            <StackLayout>
+                <Image Source="edit_icon.png" WidthRequest="100" Margin="0,30,0,20"/>
+                <Label Text="Share your opinion!" TextColor="DarkGray" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+                <Label Text="You have not shared any product review yet." TextColor="Gray" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage>
+</TabbedPage>

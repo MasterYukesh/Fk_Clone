@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mofkvm="clr-namespace:Fk_Clone.ViewModel"
+             x:Class="Fk_Clone.View.MoreOnFk"
+             Title="More On Fk"
+             BackgroundColor="Black">
+    <ContentPage.BindingContext>
+        <mofkvm:MoreOnFkVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding MoreOns}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="3" HorizontalItemSpacing="5" VerticalItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Gray" Padding="2" Margin="2">
+                            <StackLayout>
+                                <Image Source="{Binding image}" WidthRequest="70"/>
+                                <Label Text="{Binding section}" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>            
+    </ContentPage.Content>
+</ContentPage>

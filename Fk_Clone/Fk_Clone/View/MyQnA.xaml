@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fk_Clone.View.MyQnA"
+            Title="My Questions &amp; Answers"
+            BackgroundColor="black">
+    <TabbedPage Title="QUESTIONS">
+        <ContentPage>
+            <StackLayout>
+                <Label Text="You haven't posted any questions &#10;                               yet" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Gray" FontSize="15"/>
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage>
+    <TabbedPage Title="ANSWERS">
+        <ContentPage>
+            <StackLayout>
+                <Label Text="You haven't answered any questions &#10;                               yet" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Gray" FontSize="15"/>
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage>
+</TabbedPage>

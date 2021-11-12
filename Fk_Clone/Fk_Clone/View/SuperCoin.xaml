@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ecvm="clr-namespace:Fk_Clone.ViewModel"
+             x:Class="Fk_Clone.View.SuperCoin"
+             Title="SuperCoin"
+             BackgroundColor="Black">
+    <ContentPage.BindingContext>
+        <ecvm:SuperCoinVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>        
+        <StackLayout>            
+            <StackLayout Margin="20,0,20,0" >
+                <SearchBar Placeholder="Use Super Coins and start Saving" PlaceholderColor="Black" BackgroundColor="LightGreen" HeightRequest="40"/>
+            </StackLayout>            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="All" TextColor="{Binding All_c}" FontSize="20"  Margin="50,0,50,0" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Allcoins}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Use Coins" TextColor="{Binding Usecoins_c}" FontSize="20"  Margin="10,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Usecoins}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Earn Coins" TextColor="{Binding Earncoins_c}" FontSize="20" Margin="20,0,20,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EarnCoins}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>            
+            <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>                
+                    <StackLayout  BackgroundColor="Orange" Padding="0,8" Margin="0,0,0,-6" IsVisible="{Binding Is_AllCoins}">
+                    <ScrollView Orientation="Horizontal" BackgroundColor="LightSteelBlue" HorizontalScrollBarVisibility="Never" Padding="0,3,0,5">
+                        <StackLayout Orientation="Horizontal" Margin="0" BackgroundColor="LightSteelBlue">
+                            <StackLayout Margin="20,0,10,5">
+                                <Image Source="icon.png" WidthRequest="40"/>
+                                <Label Text="Rewards" TextColor="Black" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout Margin="10,0">
+                                <Image Source="icon.png" WidthRequest="40"/>
+                                <Label Text="Super &#10;  Coin" TextColor="Black" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout Margin="10,0">
+                                <Image Source="icon.png" WidthRequest="40"/>
+                                <Label Text="Super &#10;Games" TextColor="Black" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout Margin="10,0">
+                                <Image Source="icon.png" WidthRequest="40"/>
+                                <Label Text="Flipkart &#10;Coupons" TextColor="Black" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout Margin="10,0">
+                                <Image Source="icon.png" WidthRequest="40"/>
+                                <Label Text="Recharges" TextColor="Black" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout Margin="10,0">
+                                <Image Source="icon.png" WidthRequest="40"/>
+                                <Label Text="SuperCoin &#10;        Pay" TextColor="Black" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout Margin="10,0,20,0">
+                                <Image Source="icon.png" WidthRequest="40"/>
+                                <Label Text="Videos" TextColor="Black" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView>
+                        <Frame CornerRadius="20" BackgroundColor="DeepPink" IsVisible="{Binding Is_UseCoins}">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="fk_logo.png" WidthRequest="80" HorizontalOptions="StartAndExpand"/>
+                                <StackLayout Margin="0,20,10,0">
+                                    <Label Text="Extra Up to 5000 Off on &#10; Premium Perfumes &amp; Wallets"/>
+                                    <Label Text="Use Coins &amp; Save" TextColor="Yellow" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Image Source="icon.png" VerticalOptions="StartAndExpand" WidthRequest="30"/>
+                            </StackLayout>        
+                        </Frame>
+                    <StackLayout BackgroundColor="Violet" Margin="0,3,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout >
+                                <Label Text="Products at 199" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="15,10,15,0"/>
+                                <Label Text="Pay using SuperCoins" TextColor="Black"  Margin="15,0,15,10"/>
+                            </StackLayout>
+                            <Label Text=">" TextColor="Yellow" HorizontalOptions="EndAndExpand" FontAttributes="Bold" FontSize="20" Margin="10,15,15,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="Black" CornerRadius="10" Margin="10,0,0,7">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="70"/>
+                                    <Label Text="Revlon RVDR5229IN Hair D..." TextColor="White"/>
+                                    <Label Text="Wattage: 2200 W" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Black" CornerRadius="10" Margin="0,0,10,7">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="70"/>
+                                    <Label Text="Marie Claire M18 Hair Strai..." TextColor="White"/>
+                                    <Label Text="1.8 m cord length" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout BackgroundColor="Black" HeightRequest="30"/>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#FFE6E8">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="fk_logo.png" WidthRequest="50" Margin="10"/>
+                            <Label Text="Popular in Rewards" TextColor="#F52887" FontSize="20" Margin="0,20" FontAttributes="Bold"/>
+                            <Label Text=">" HorizontalOptions="EndAndExpand" FontSize="20" TextColor="Black" Margin="20,20,20,0"/>
+                        </StackLayout>
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BackgroundColor="#38ACEC" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Flipkart Gift Card &#10; Worth 2500 OFF" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="Use 2500" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="orange" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Zomato Pro &#10; 3 Months Subscription" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="From 1" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="#DC143C" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Donate a Meal  &#10; This Festive Season" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="From 30" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="#46C7C7" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Disney + Hotstar  &#10; 12 Months Pack" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="Use 1" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="#A74AC7" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Sony LIV &#10; 1+1 Moth Free" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="Use 50" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="#9E7BFF" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Leaf Earphone &#10; Complimentary Offer" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="From 1" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="#F88158" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="JioSaavn Annual Pack &#10; Flat 30% OFF" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="From 1" TextColor="Black" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Black" HeightRequest="30"/>
+                    <StackLayout BackgroundColor="#52D017">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="fk_logo.png" WidthRequest="50" Margin="10"/>
+                            <Label Text="Trending Fk Coupons" TextColor="#7D0552" FontSize="20" Margin="0,20" FontAttributes="Bold"/>
+                            <Label Text=">" HorizontalOptions="EndAndExpand" FontSize="20" TextColor="Black" Margin="20,20,20,0"/>
+                        </StackLayout>
+                        <Frame CornerRadius="5" HorizontalOptions="StartAndExpand" BackgroundColor="#3090C7">
+                            <StackLayout>
+                                <Image Source="fk_logo.png" HeightRequest="60"/>
+                                <Label Text="Groceries" FontSize="10" TextColor="Black" FontAttributes="Bold"/>
+                                <Label Text="Extra 150 Off on &#10; Grocery" TextColor="Black" FontAttributes="Bold"/>
+                                <Frame CornerRadius="10" BorderColor="Blue" Padding="3">
+                                    <Label Text="Use 25" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+                                </Frame>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#FF1493" Margin="0,3,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout >
+                                <Label Text="Products at 49" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="15,10,15,0"/>
+                                <Label Text="Pay using SuperCoins" TextColor="Black"  Margin="15,0,15,10"/>
+                            </StackLayout>
+                            <Label Text=">" TextColor="Yellow" HorizontalOptions="EndAndExpand" FontAttributes="Bold" FontSize="20" Margin="10,15,15,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="Black" CornerRadius="10" Margin="10,0,5,0">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Fk SmartBuy Vegetabl.." TextColor="White"/>
+                                    <Label Text="Just 49" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Black" CornerRadius="10" >
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Best deals on  Grocery" TextColor="White"/>
+                                    <Label Text="Just At 49" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="Black" CornerRadius="10"  Margin="10,0,5,0">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Kid's Clothing                  " TextColor="White"/>
+                                    <Label Text="Just 49" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Black" CornerRadius="10" >
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Fk SmartBuy Vegetabl.." TextColor="White"/>
+                                    <Label Text="Just 49" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Black" HeightRequest="30"/>
+                    <StackLayout BackgroundColor="#FFE6E8">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="fk_logo.png" WidthRequest="50" Margin="10"/>
+                            <Label Text="Fk Coupons for You" TextColor="#F52887" FontSize="20" Margin="0,20" FontAttributes="Bold"/>
+                            <Label Text=">" HorizontalOptions="EndAndExpand" FontSize="20" TextColor="Black" Margin="20,20,20,0"/>
+                        </StackLayout>
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BackgroundColor="#38ACEC" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Kent Liquid Dispenser" FontSize="9" TextColor="Black"/>
+                                        <Label Text="Extra 100 Off &#10; on Kent Liquid Dis.." TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Frame BorderColor="white" CornerRadius="5" Padding="3">
+                                            <Label Text="Use 50" TextColor="Black" FontAttributes="Bold"/>
+                                        </Frame>                                        
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="orange" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Cleanig Range" FontSize="9" TextColor="Black"/>
+                                        <Label Text="Extra 100 Off on &#10; Cleaning  Range" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Frame BorderColor="white" CornerRadius="5" Padding="3">
+                                            <Label Text="Use 40" TextColor="Black" FontAttributes="Bold"/>
+                                        </Frame>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="#DC143C" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Kitchen Essentials" FontSize="9" TextColor="Black"/>
+                                        <Label Text="Extra 100 Off on &#10; Kitchen Essentials" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Frame BorderColor="white" CornerRadius="5" Padding="3">
+                                            <Label Text="Use 30" TextColor="Black" FontAttributes="Bold"/>
+                                        </Frame>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame BackgroundColor="#46C7C7" CornerRadius="5">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="60"/>
+                                        <Label Text="Samsonite Bags &amp; Lu.." FontSize="9" TextColor="Black"/>
+                                        <Label Text="Extra 500 Off on  &#10; Samsonite Bags &amp;.." TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                                        <Frame BorderColor="white" CornerRadius="5" Padding="3" BackgroundColor="LightGray">
+                                            <Label Text="Only for Plus"  TextColor="White" FontAttributes="Bold"/>
+                                        </Frame>
+                                    </StackLayout>
+                                </Frame>                                                       
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="Black" HeightRequest="20"/>
+                    <StackLayout BackgroundColor="#FF1493" Margin="0,3,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout >
+                                <Label Text="Products at 49" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="15,10,15,0"/>
+                                <Label Text="Pay using SuperCoins" TextColor="Black"  Margin="15,0,15,10"/>
+                            </StackLayout>
+                            <Label Text=">" TextColor="Yellow" HorizontalOptions="EndAndExpand" FontAttributes="Bold" FontSize="20" Margin="10,15,15,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="Black" CornerRadius="10" Margin="20,0,5,0">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="ZEE 5" TextColor="White" FontAttributes="Bold"/>
+                                    <Label Text="1 Month Subscription" TextColor="Gray"/>
+                                    <Label Text="From 1" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Black" CornerRadius="10" >
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Disney + Hotstar" TextColor="White" FontAttributes="Bold"/>
+                                    <Label Text="12 Months Pack       " TextColor="Gray"/>
+                                    <Label Text="From 1" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="Black" CornerRadius="10"  Margin="20,0,5,0">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Sony LIV" TextColor="White" FontAttributes="Bold"/>
+                                    <Label Text="1 Month Pack              " TextColor="Gray"/>
+                                    <Label Text="From 1" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Black" CornerRadius="10" >
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Voot Select" TextColor="White" FontAttributes="Bold"/>
+                                    <Label Text="12 Months Pack       " TextColor="Gray"/>
+                                    <Label Text="From 1" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                    <StackLayout IsVisible="{Binding Is_EarnCoins}">                        
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Margin="20,20,0,20">
+                                <Image Source="icon.png" WidthRequest="35"/>
+                                <Label Text="Video" TextColor="White" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout Margin="20,20,0,20">
+                                <Image Source="icon.png" WidthRequest="35"/>
+                                <Label Text="Super Games" TextColor="White" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout Margin="20,20,0,20">
+                                <Image Source="icon.png" WidthRequest="35"/>
+                                <Label Text="Challenges" TextColor="White" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <CarouselView ItemsSource="{Binding Eccv}" HeightRequest="150">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame CornerRadius="20" BackgroundColor="{Binding colour}" HeightRequest="150">
+                                        <StackLayout Orientation="Horizontal">
+                                            <StackLayout>
+                                                <Label Text="{Binding text1}" TextColor="Black" FontAttributes="Bold"/>
+                                                <Frame BackgroundColor="LightGray" Padding="3" HorizontalOptions="CenterAndExpand">
+                                                    <Label TextColor="White" Text="{Binding text2}" FontAttributes="bold"/>
+                                                </Frame>
+                                            </StackLayout>
+                                            <Image Source="{Binding img}" WidthRequest="100" HorizontalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <Label Text="Earn Bonus SuperCoins" Margin="10" TextColor="White" FontAttributes="bold" FontSize="20"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="10" Margin="15,0" BackgroundColor="Black" BorderColor="Gray">
+                                <StackLayout>
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Premium Perfumes" TextColor="gray"/>
+                                    <Label Text="Earn Extra Up to 50" TextColor="white"/>
+                                    <Label Text="Shop Now" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="10" BackgroundColor="Black" BorderColor="Gray">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Zayn &amp; Myza" TextColor="gray"/>
+                                    <Label Text="Earn Extra Up to 50" TextColor="white"/>
+                                    <Label Text="Shop Now" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10" >
+                            <Label Text="Watch Videos to Earn SuperCoins" FontAttributes="bold" TextColor="White" FontSize="20"/>
+                            <Label Text=">" HorizontalOptions="EndAndExpand" Margin="10,-9,10,0" FontSize="30" TextColor="Lightblue"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="10" Margin="20,0,0,0">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="100"/>
+                                        <Label Text="Ladies vs Gentlemen" TextColor="Gray"/>
+                                        <Label Text="Earn Up to 15" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Text="Watch Now" TextColor="Green"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame CornerRadius="10">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="100"/>
+                                        <Label Text="Funtastic Quiz           " TextColor="Gray"/>
+                                        <Label Text="Earn Up to 15" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Text="Watch Now" TextColor="Green"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="10"  Margin="20,0,0,0">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="100"/>
+                                        <Label Text="Kya Bolti public ?       " TextColor="Gray"/>
+                                        <Label Text="Earn Up to 15" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Text="Watch Now" TextColor="Green"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame CornerRadius="10">
+                                    <StackLayout>
+                                        <Image Source="fk_logo.png" WidthRequest="100"/>
+                                        <Label Text="Sirf Ek Minute            " TextColor="Gray"/>
+                                        <Label Text="Earn Up to 15" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Text="Watch Now" TextColor="Green"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                        <Label Text="Earn SuperCoins On Games" Margin="10" TextColor="White" FontAttributes="bold" FontSize="20"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="10" Margin="15,0" BackgroundColor="Black" BorderColor="Gray">
+                                <StackLayout>
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Bubble Shooter" TextColor="gray"/>
+                                    <Label Text="Earn 50" TextColor="white" FontAttributes="Bold"/>
+                                    <Label Text="Play Now" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="10" BackgroundColor="Black" BorderColor="Gray">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Snake Smash" TextColor="gray"/>
+                                    <Label Text="Earn 5" TextColor="white" FontAttributes="Bold"/>
+                                    <Label Text="Play Now" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <Label Text="SuperCoin Partner Brands" Margin="10" TextColor="White" FontAttributes="bold" FontSize="20"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="10" Margin="0" BackgroundColor="Black" BorderColor="Gray">
+                                <StackLayout>
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="fly for FREE!" TextColor="gray"/>
+                                    <Label Text="Use Coins on Cleartrip" TextColor="white" FontAttributes="Bold"/>
+                                    <Label Text="Know More" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="10" BackgroundColor="Black" BorderColor="Gray">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100"/>
+                                    <Label Text="Myntra Insider Points" TextColor="gray"/>
+                                    <Label Text="Are Now SuperCoins" TextColor="white" FontAttributes="Bold"/>
+                                    <Label Text="Know More" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

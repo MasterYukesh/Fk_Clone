@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:svm="clr-namespace:Fk_Clone.ViewModel"
+             x:Class="Fk_Clone.View.Shop"
+             Title="Flipkart"
+             BackgroundColor="black">
+    <ContentPage.BindingContext>
+        <svm:ShopVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="fk_logo.png"/>
+        <ToolbarItem IconImageSource="fk_logo.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="White" Margin="10,10" Padding="-5">
+                <SearchBar Placeholder="Search for Products, Brands and More"  PlaceholderColor="Black" Margin="-15,0,0,0"/>
+            </StackLayout>
+            <ScrollView Grid.Row="0" Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Margin="0,0,0,-15"> 
+            <StackLayout Orientation="Horizontal" Margin="0,-4,0,-6" Padding="0,-0.5,0,10">
+                    <StackLayout Margin="2.5,0,2.5,20">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="All Categories"  HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="10" Margin="0,0,0,16"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Offer Zone" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Grocery" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Mobiles" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Fashion" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Electronics" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Home"  HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Beauty" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Appliances" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Toys &amp; Baby " TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Flight " TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Insurance" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Sports" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Food &amp; more" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Fresh" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Refurbished" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                    <StackLayout Margin="2.5,0">
+                        <Image Source="icon.png" WidthRequest="30"/>
+                        <Label Text="Gift Cards" TextColor="White" FontSize="10"/>
+                    </StackLayout>
+                </StackLayout>                    
+            </ScrollView>
+            <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never" Margin="0,15">
+                <StackLayout BackgroundColor="Black" Padding="1" Margin="0">
+                    <CarouselView ItemsSource="{Binding Cv}" VerticalOptions="StartAndExpand" Margin="0,-250,0,-250">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding url}"  Aspect="AspectFit"/>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <Label Text="Recently Viewed Stories" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BorderColor="White" BackgroundColor="Black">
+                            <StackLayout Orientation="Vertical" >
+                                <Image Source="fk_logo.png" WidthRequest="80"/>
+                                <Label Text="Crime,Mystery &amp; thriller" TextColor="White"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BorderColor="White" BackgroundColor="Black">
+                            <StackLayout Orientation="Vertical" >
+                                <Image Source="fk_logo.png" WidthRequest="80"/>
+                                <Label Text="Wrist Watches" TextColor="White"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BorderColor="White" BackgroundColor="Black">
+                            <StackLayout Orientation="Vertical" >
+                                <Image Source="fk_logo.png" WidthRequest="80"/>
+                                <Label Text="Headphones" TextColor="White"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#BDEDFF">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Discounts for You" TextColor="Black" FontSize="23" FontAttributes="Bold" Margin="0,10"/>
+                            <Label Text=">" TextColor="White" FontAttributes="Bold" FontSize="20" Margin="10,10" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="white" HeightRequest="200" WidthRequest="150" Margin="20,0,2.5,2.5" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Crime , Mystery &amp; Thriller" TextColor="Black"/>
+                                    <Label Text="Min 20% Off" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="white"  HeightRequest="200" WidthRequest="150" Margin="2.5,0,20,2.5" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Sports" TextColor="Black"/>
+                                    <Label Text="Min 40% Off" TextColor="Green" FontAttributes="Bold" Margin="0,18,0,0"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Frame BackgroundColor="white" HeightRequest="200" WidthRequest="150"  Margin="20,2.5,2.5,15" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Wrist Watches" TextColor="Black"/>
+                                    <Label Text="Min 80% Off" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="white"  HeightRequest="200" WidthRequest="150" Margin="2.5,2.5,20,15" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Audio &amp; Video" TextColor="Black"/>
+                                    <Label Text="Min 50% Off" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#43C6DB" Margin="0,-7">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Maha Saver" FontSize="20" TextColor="Black" FontAttributes="Bold" Margin="20"/>
+                            <Label Text="View All" FontSize="18" TextColor="White" FontAttributes="Bold" Margin="15,20" BackgroundColor="CornflowerBlue" HorizontalOptions="EndAndExpand" Padding="10,5"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="white" HeightRequest="200" WidthRequest="150" Margin="10,0,-2.5,-3" BorderColor="Black">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Rings" TextColor="Black" Margin="0,20,0,0"/>
+                                    <Label Text="Under 299" TextColor="Green" FontAttributes="Bold" />
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="white"  HeightRequest="200" WidthRequest="150" Margin="-3,0,10,-3" BorderColor="Black" >
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Mangalasutra" TextColor="Black" Margin="0,20,0,0"/>
+                                    <Label Text="Under 99" TextColor="Green" FontAttributes="Bold" />
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Frame BackgroundColor="white" HeightRequest="200" WidthRequest="150"  Margin="10,-3,-2.5,0" BorderColor="Black" >
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Brief , Trunks ..." TextColor="Black" Margin="0,20,0,0"/>
+                                    <Label Text="From  129" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="white"  HeightRequest="200" WidthRequest="150" Margin="-3,-3,10,0" BorderColor="Black">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Boxers" TextColor="Black" Margin="0,20,0,0"/>
+                                    <Label Text="Upto 70% Off" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>                        
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,10">
+                        <Frame BackgroundColor="Black" BorderColor="White" Margin="0" CornerRadius="10">
+                            <StackLayout >
+                                <Image Source="Fk_logo.png" WidthRequest="80" HeightRequest="70"/>
+                                <Label Text="Under 9" TextColor="white" FontAttributes="Bold"/>
+                                <Label Text="Free 90 Min. Delivery" TextColor="Gray" FontSize="12"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="Black" BorderColor="White" CornerRadius="10">
+                            <StackLayout >
+                                <Image Source="Fk_logo.png" WidthRequest="80" HeightRequest="70"/>
+                                <Label Text="From 599" TextColor="white" FontAttributes="Bold"/>
+                                <Label Text="WFH Furniture" TextColor="Gray" FontSize="12"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="Black" BorderColor="White" CornerRadius="10">
+                            <StackLayout >
+                                <Image Source="Fk_logo.png" WidthRequest="80" HeightRequest="70"/>
+                                <Label Text="From 2790" TextColor="white" FontAttributes="Bold"/>
+                                <Label Text="Mattresses" TextColor="Gray" FontSize="12"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#357EC7	" Orientation="Horizontal">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="icon.png" WidthRequest="30"/>
+                                <Label Text="Pay On Delivery" TextColor="white" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="icon.png" WidthRequest="30"/>
+                                <StackLayout >
+                                    <Label Text="Over 60 Lakhs " FontAttributes="Bold" TextColor="white"/>
+                                    <Label Text="4+ Star rated products" FontAttributes="Bold" TextColor="White"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="icon.png" WidthRequest="30"/>
+                                <Label Text="Easy Returns" TextColor="white" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Image Source="threefinger.jpg" HeightRequest="100" HorizontalOptions="EndAndExpand" Margin="20,0"/>
+                    </StackLayout>
+                    <StackLayout >                        
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="red"  HeightRequest="200" WidthRequest="150" Margin="10,0,2.5,2.5" CornerRadius="10">
+                                <StackLayout>
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Get upto 150 off" FontAttributes="Bold" TextColor="White" Margin="0,10,0,-5"/>
+                                    <Label Text="On orders worth 500 &amp; more" TextColor="white" />
+                                    <Label Text="Activate Now >" FontAttributes="Bold" TextColor="Black" BackgroundColor="white" Padding="2" Margin="0,10,40,0"/>                                    
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="#1F45FC"  HeightRequest="200" WidthRequest="150" Margin="2.5,0,10,2.5" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Introducing Hospicash" TextColor="White" FontSize="13" FontAttributes="Bold" Margin="0,10,0,-5"/>
+                                    <Label Text="Insurances for Hosspital expenses" TextColor="White"  />
+                                    <Label Text="Upto 2000/Day >" FontAttributes="Bold" TextColor="White" BackgroundColor="red" Padding="2" Margin="0,10,20,0"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Frame BackgroundColor="white" HeightRequest="200" WidthRequest="150"  Margin="10,2.5,2.5,15" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Buy More, Save More" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
+                                    <Label Text="Mixers, Kettles, Toasters..." FontSize="12" TextColor="Gray" Margin="0,19,0,0"/>
+                                    <Label Text="Buy 3 ,Get 5% Off" TextColor="Green" FontAttributes="Bold" Margin="0,10,0,0"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="white"  HeightRequest="200" WidthRequest="150" Margin="2.5,2.5,10,15" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Home Utilities &amp; Organizers" FontAttributes="Bold" Margin="-10,0" FontSize="14" TextColor="Black"/>
+                                    <Label Text="Step Ladders , Hangers &amp; More" TextColor="Gray"  FontSize="12" Margin="-10,0"/>
+                                    <Label Text="From 129" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                    <Frame BackgroundColor="Orange" CornerRadius="20">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout >
+                                <Label Text="Extra Discounts on UPI Payments" TextColor="Black" FontSize="16"/>
+                                <Label Text="For Your Flight Bookings" TextColor="Black" FontSize="16"/>
+                                <Label Text="Book Now" BackgroundColor="white" FontAttributes="Bold" TextColor="Black" Margin="0,5,160,0" Padding="2"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout >
+                                        <Label Text="Flipkart" FontAttributes="Bold" TextColor="White" FontSize="18" Margin="10,30,0,0"/>
+                                        <Label Text="Flights" FontAttributes="Italic" TextColor="White" Margin="20,0,0,0"/>
+                                    </StackLayout>
+                                    <Image Source="fk_logo.png" WidthRequest="40" Margin="0,25,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <Image Source="upi_offer.png" HorizontalOptions="EndAndExpand" WidthRequest="100" />
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="fk_logo" WidthRequest="50" Margin="0,12"/>
+                            <StackLayout Margin="10">
+                                <Label Text="Suggested for You" TextColor="white" FontSize="25" Margin="0,10"/>
+                                <Label Text="Inspired by Your Interest" TextColor="Gray" FontSize="15"/>
+                            </StackLayout>
+                            <Label Text="View All  >" FontAttributes="Bold" TextColor="White" HorizontalOptions="EndAndExpand" Margin="5,40,10,40" BackgroundColor="CornflowerBlue" Padding="8"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="Black" BorderColor="White" Margin="-10,0,0,0">
+                                <StackLayout>
+                                    <Image Source="fk_logo.png" WidthRequest="200"  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,50"/>
+                                    <Label Text="SNJ Royal Sugar" HorizontalOptions="CenterAndExpand" TextColor="Gray" FontAttributes="Bold" />
+                                    <Label HorizontalOptions="CenterAndExpand">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="48 " TextColor="White" FontAttributes="Bold"/>
+                                                <Span Text=" 60 " TextDecorations="Strikethrough"/>
+                                                <Span Text="20% Off" FontAttributes="Bold" TextColor="Green"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout HorizontalOptions="EndAndExpand">
+                                <Frame BackgroundColor="Black" BorderColor="White" Margin="-7,0,-5,-3.5">
+                                    <StackLayout >
+                                        <Image Source="fk_logo.png" WidthRequest="100"/>
+                                        <Label Text="Flipkart Supermart S.." TextColor="Gray" FontAttributes="Bold"/>
+                                        <Label HorizontalOptions="CenterAndExpand">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="106 " TextColor="White" FontAttributes="Bold"/>
+                                                    <Span Text=" 140 " TextDecorations="Strikethrough"/>
+                                                    <Span Text="24% Off" FontAttributes="Bold" TextColor="Green"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame  BackgroundColor="Black" BorderColor="White" Margin="-7,-3.5,-5,0">
+                                    <StackLayout >
+                                        <Image Source="fk_logo.png" WidthRequest="100"/>
+                                        <Label Text="Flipkart Supermart S.." TextColor="Gray" FontAttributes="Bold"/>
+                                        <Label HorizontalOptions="CenterAndExpand">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="25 " TextColor="White" FontAttributes="Bold"/>
+                                                    <Span Text=" 30 " TextDecorations="Strikethrough"/>
+                                                    <Span Text="16% Off" FontAttributes="Bold" TextColor="Green"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="#FF7722" Margin="20,0,0,0" CornerRadius="10">
+                            <StackLayout >
+                                <Image Source="fk_logo.png" WidthRequest="70"/>
+                                <Label Text="Infix Hot 11" TextColor="Black" FontAttributes="Bold"/>
+                                <Label Text="6.6&quot; FHD+ | Helio G70" TextColor="White"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Just 9,499" TextColor="Green" FontAttributes="Bold"/>
+                                    <Label Text="11,999" TextDecorations="Strikethrough" HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#EE82EE" Margin="0,0,20,0" HorizontalOptions="EndAndExpand" CornerRadius="10">
+                            <StackLayout >
+                                <Image Source="fk_logo.png" WidthRequest="70"/>
+                                <Label Text="From 1" TextColor="Black" FontAttributes="Bold"/>
+                                <Label Text="Ghee &amp; Cookies" TextColor="White" FontAttributes="Bold" />                               
+                                <Label Text="Mega Saving Deals" TextColor="Green" FontAttributes="Bold"/>                                                                  
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="#E0B0FF">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Trending Offers" TextColor="Black" FontSize="23" FontAttributes="Bold" Margin="0,10"/>
+                            <Label Text=">" TextColor="White" FontAttributes="Bold" FontSize="20" Margin="10,10" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame BackgroundColor="white" HeightRequest="200" WidthRequest="150" Margin="20,0,2.5,2.5" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Men's Shirt &amp; Trousers F..." TextColor="Black"/>
+                                    <Label Text="Special Offers" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="white"  HeightRequest="200" WidthRequest="150" Margin="2.5,0,20,2.5" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Wrist Watches" TextColor="Black"/>
+                                    <Label Text="Extra 20% Off" TextColor="Green" FontAttributes="Bold" Margin="0,18,0,0"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"  >
+                            <Frame BackgroundColor="white" HeightRequest="200" WidthRequest="150"  Margin="20,2.5,2.5,15" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Women's Sarees" TextColor="Black"/>
+                                    <Label Text="Extra 10% Off" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="white"  HeightRequest="200" WidthRequest="150" Margin="2.5,2.5,20,15" CornerRadius="10">
+                                <StackLayout >
+                                    <Image Source="fk_logo.png" WidthRequest="100" />
+                                    <Label Text="Jewellery Sets" TextColor="Black"/>
+                                    <Label Text="Extra 25% Off" TextColor="Green" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>                
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

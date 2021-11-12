@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fk_Clone.View.MyNotifications"
+             Title="Notifications"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="No notification yet" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Simply browse,create a wishlist" TextColor="LightGray"/>
+            <Label Text="or make a purchase" TextColor="LightGray" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

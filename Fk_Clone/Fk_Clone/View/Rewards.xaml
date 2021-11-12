@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rvm="clr-namespace:Fk_Clone.ViewModel"
+             x:Class="Fk_Clone.View.Rewards"
+             Title="My Rewards"
+             BackgroundColor="Black">
+    <ContentPage.BindingContext>
+        <rvm:RewardsVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Coupon"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" BackgroundColor="White" >
+                    <StackLayout Orientation="Horizontal"   BackgroundColor="Black" Padding="0,15" Margin="0,-1,0,1">
+                        <Frame CornerRadius="20"  BorderColor="{Binding All_c}"  BackgroundColor="Black" >
+                            <Label Text="All" TextColor="{Binding All_c}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding All}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Frame>
+                        <Frame CornerRadius="20" BorderColor="{Binding Supercoinzone_c}"  BackgroundColor="Black">
+                            <Label Text="SuperCoin Zone" TextColor="{Binding Supercoinzone_c}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SuperCoinZone}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Frame>
+                        <Frame CornerRadius="20" BorderColor="{Binding Gamezone_c}" BackgroundColor="Black">
+                            <Label Text="GameZone" TextColor="{Binding Gamezone_c}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Gamezone}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Frame>
+                        <Frame CornerRadius="20" BorderColor="{Binding Videos_c}" BackgroundColor="Black">
+                            <Label Text="Videos" TextColor="{Binding Videos_c}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Videos}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Frame>               
+                    </StackLayout>
+                </ScrollView>
+                <CollectionView  Margin="0,5" ItemsSource="{Binding Rcv}" IsVisible="{Binding Is_all}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Span="2" Orientation="Vertical" HorizontalItemSpacing="5" VerticalItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame CornerRadius="10" BorderColor="White" BackgroundColor="Black">
+                                <StackLayout BackgroundColor="Black">
+                                    <Image Source="{Binding img}" WidthRequest="40"/>
+                                    <Label Text="{Binding t1 }" TextColor="White" HorizontalOptions="CenterAndExpand"  FontAttributes="Bold"/>
+                                    <Label Text="{Binding t2 }" TextColor="White" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                                    <Label Text="{Binding t3 }" TextColor="Gray" HorizontalOptions="CenterAndExpand"/>
+                                    <Label Text="{Binding tc }" TextColor="Green" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout IsVisible="{Binding Is_supercoinzone_videos}">
+                    <Image Source="fk_logo.png" WidthRequest="80" Margin="0,50,0,20"/>
+                    <Label Text="No SuperCoin Rewards yet" TextColor="White" FontAttributes="bold" HorizontalOptions="CenterAndExpand" FontSize="25" Margin="0,0,0,10"/>
+                    <Frame BackgroundColor="CornflowerBlue" CornerRadius="10" HorizontalOptions="CenterAndExpand" Padding="10">
+                        <Label Text="Explore SuperCoin Zone" TextColor="White">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Scz}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

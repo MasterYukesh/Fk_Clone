@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fk_Clone.View.Orders"
+             Title="My Orders"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Frame BackgroundColor="White" BorderColor="White"  Padding="-14,4,-29,4">
+                    <SearchBar Placeholder="Search you order here" PlaceholderColor="Black" />
+                </Frame>
+                <Label Text="Filters" TextColor="white" VerticalOptions="CenterAndExpand" FontSize="19" HorizontalOptions="EndAndExpand" Margin="25,0"/>
+            </StackLayout>
+            <Frame BorderColor="LightGray" BackgroundColor="Black" Margin="10,20,10,10">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="fk_logo.png" WidthRequest="50"/>
+                    <StackLayout >
+                        <Label Text="Delivered on Apr 27,2019" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="Problems &amp; Solutions in Organic C.." TextColor="Gray"/>
+                    </StackLayout>
+                    <Label Text=">" TextColor="DarkGray" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" FontSize="25"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="LightGray" BackgroundColor="Black" Margin="10,0,10,10">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="fk_logo.png" WidthRequest="50"/>
+                    <StackLayout >
+                        <Label Text="Delivered on May 03,2019" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="National Council of Education Res..." TextColor="Gray"/>
+                    </StackLayout>
+                    <Label Text=">" TextColor="DarkGray" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" FontSize="25"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="LightGray" BackgroundColor="Black" Margin="10,0,10,10">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="fk_logo.png" WidthRequest="50"/>
+                    <StackLayout >
+                        <Label Text="Delivered on May 03,2019" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="National Council of Education Res..." TextColor="Gray"/>
+                    </StackLayout>
+                    <Label Text=">" TextColor="DarkGray" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" FontSize="25"/>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="LightGray" BackgroundColor="Black" Margin="10,0,10,10">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="fk_logo.png" WidthRequest="50"/>
+                    <StackLayout >
+                        <Label Text="Delivered on Nov 20,2014" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="Hitman Collection (4 Games Pack)" TextColor="Gray"/>
+                    </StackLayout>
+                    <Label Text=">" TextColor="DarkGray" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" FontSize="25"/>
+                </StackLayout>
+            </Frame>
+            <Label Text="No more orders" TextColor="Gray" FontSize="20"  Margin="0,40,0,0" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

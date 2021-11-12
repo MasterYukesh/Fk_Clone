@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mavm="clr-namespace:Fk_Clone.ViewModel"
+             x:Class="Fk_Clone.View.MyAccount"
+             Title="My Account"
+             BackgroundColor="Black">
+    <ContentPage.BindingContext>
+        <mavm:MyAccountVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+        <StackLayout BackgroundColor="Black">
+            <StackLayout BackgroundColor="Black">
+                <Image Source="icon.png" />
+                <Label FontSize="25" TextColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Text="{Binding Username}" Margin="0,15,0,0"/>
+                    <Label FontSize="15" TextColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Text="{Binding Phone_num}" Margin="0,10,0,0"/>
+                <Label FontSize="15" TextColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Text="{Binding Mail_id}"/>
+                    <Image Source="edit_icon.png" HorizontalOptions="EndAndExpand" HeightRequest="25">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding edit}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+            <StackLayout BackgroundColor="LightGray">
+                <Frame BackgroundColor="Black" Margin="5,5,5,2.5">
+                    <StackLayout>
+                            <Label Text="Flipkart Plus" TextColor="White" FontSize="18" />
+                        <Button Text="view plus zone" BackgroundColor="Black" TextColor="CornflowerBlue" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>                    
+                </Frame>
+                <Frame BackgroundColor="Black" Margin="5,2.5">
+                    <StackLayout>
+                            <Label Text="My Orders" TextColor="White" FontSize="18"/>
+                        <Button Text="view all orders" BackgroundColor="Black" TextColor="CornflowerBlue" HorizontalOptions="EndAndExpand" Command="{Binding Order}"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="Black" Margin="5,2.5">
+                    <StackLayout>
+                            <Label Text="My Wishlist" TextColor="White" FontSize="18"/>
+                        <Button Text="view your wishlist" BackgroundColor="Black" TextColor="CornflowerBlue" HorizontalOptions="EndAndExpand" Command="{Binding Wishlist}"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="Black" Margin="5,2.5">
+                    <StackLayout>                        
+                        <Label Text="My Cards &amp; Wallet" TextColor="White" FontSize="18"/>
+                        <Button Text="view details" BackgroundColor="Black" TextColor="CornflowerBlue" HorizontalOptions="EndAndExpand" Command="{Binding CnW}"/>
+                    </StackLayout>
+                </Frame>
+                    <Frame BackgroundColor="Black" Margin="5,2.5">
+                    <StackLayout>
+                            <Label Text="My Reviews" TextColor="White" FontSize="18"/>
+                        <Button Text="view your reviews" BackgroundColor="Black" TextColor="CornflowerBlue" HorizontalOptions="EndAndExpand" Command="{Binding Review}"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="Black" Margin="5,2.5">
+                    <StackLayout>
+                        <Label Text="My Questions And Answers" TextColor="White" FontSize="18"/>
+                        <Button Text="view Q&amp;A" BackgroundColor="Black" TextColor="CornflowerBlue" HorizontalOptions="EndAndExpand" Command="{Binding QnA}"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="0,5,0,0" BackgroundColor="Black" BorderColor="White">
+                    <Label Text="Notification Preferences" TextColor="white"/>
+                </Frame>
+                <Frame  BackgroundColor="Black" BorderColor="White" Margin="0,-10">
+                    <Label Text="Account Settings" TextColor="white">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding edit}"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+                <Frame  BackgroundColor="Black" BorderColor="White" >
+                        <Label Text="Logout of this app" TextColor="white">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding logout}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Frame>
+                <Frame  BackgroundColor="Black" BorderColor="White" Margin="0,-10">
+                    <Label Text="Logout of all devices" TextColor="white"/>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

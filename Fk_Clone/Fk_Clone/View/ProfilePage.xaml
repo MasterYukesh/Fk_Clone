@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fk_Clone.View.ProfilePage"
+             xmlns:ppvm="clr-namespace:Fk_Clone.ViewModel"
+             Title="Profile"
+             BackgroundColor="black">
+    <ContentPage.BindingContext>
+        <ppvm:ProfilePageVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="icon.png" HorizontalOptions="CenterAndExpand" Margin="0,30"/>
+            <StackLayout BackgroundColor="Black" Margin="0,0,0,-10">
+                <Label Text="First Name" TextColor="Gray" Margin="0,25,0,0"/>
+                <Entry TextColor="White" Text="{Binding FN}"/>
+                <Label Text="Last Name" TextColor="Gray"/>
+                <Entry TextColor="White" Text="{Binding LN}"/>
+                <Button BackgroundColor="Black" Text="Submit" TextColor="Red" FontAttributes="Bold" FontSize="23" Command="{Binding submit}"/>
+                <Label Text="Mobile Number" TextColor="Gray"/>
+                <Entry TextColor="White" Text="{Binding MobNum}"/>
+                <Label Text="Email ID" TextColor="Gray"/>
+                <Entry TextColor="White" Text="{Binding Mailid}"/>
+                <Frame Margin="0,15,0,-10"  BackgroundColor="Black">
+                    <Label Text="Change Password" TextColor="White" FontSize="15" FontAttributes="Bold" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding changepass}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+                <Frame  BackgroundColor="Black" Margin="0,-5">
+                    <Label Text="Deactivate Account" TextColor="White" FontSize="15" FontAttributes="Bold"/>
+                </Frame>
+            </StackLayout>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

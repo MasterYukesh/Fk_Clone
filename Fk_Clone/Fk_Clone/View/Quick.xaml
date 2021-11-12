@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fk_Clone.View.Quick"
+             Title="Fk Quick"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="0,200,0,200">
+                <Image Source="fk_quick.png" BackgroundColor="Black" WidthRequest="1000" Margin="0,-100,0,0"/>                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Image Source="fruits.png" WidthRequest="150" Margin="-50,10,0,0" />
+                    <Image Source="dairy_products.png" WidthRequest="90" Margin="-10,0,30,0"/>
+                    <Image Source="grocery_2.jpg" WidthRequest="60"/>
+                </StackLayout>
+                <Label Text="Get delivery in 90 Minutes" FontSize="25" HorizontalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout BackgroundColor="white" HeightRequest="200" Margin="0,-120,0,0" VerticalOptions="CenterAndExpand">
+                <Label Text="Please add an address to continue" TextColor="Black" FontAttributes="Bold" FontSize="23"/>
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <Image Source="order.png" WidthRequest="70"/>
+                    <Label Text="You correct address will help us reach &#10; you quicker" FontSize="15" TextColor="Black"/>
+                </StackLayout>
+                <Label Text="+     Add new address" TextColor="Blue" Margin="20,30,0,0" FontAttributes="Bold" FontSize="20"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

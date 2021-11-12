@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fk_Clone.View.CardsnWallet"
+             Title="My Cards &amp; Wallet"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" BorderColor="Gray" Margin="10">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Gift Cards" TextColor="White"/>
+                        <Label Text="Rs. 0" TextColor="White"/>
+                    </StackLayout>
+                    <Label Text="Have you recieved a gift card?" TextColor="Gray"/>
+                    <Button Text="add flipkart gift card" HorizontalOptions="EndAndExpand" TextColor="CornflowerBlue" BackgroundColor="Black" Margin="20,0"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="Blue" BorderColor="Wheat" Margin="10,0,10,10">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="fk_logo.png" WidthRequest="50"/>
+                    <StackLayout>
+                        <Label Text="Gift cards for all Ocassions" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="See Options." TextColor="white"/>
+                    </StackLayout>
+                    <Label Text=">" FontAttributes="Bold" TextColor="white" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" FontSize="25"/>
+                </StackLayout>                
+            </Frame>
+            <Frame BackgroundColor="Black" BorderColor="Gray" Margin="10,0">
+                <StackLayout>                    
+                    <Label Text="Saved Cards" TextColor="White"/>                                       
+                    <Label Text="Save your Credit/Debit cards for faster payments. &#10; Your cards are secure with us." TextColor="Gray"/>
+                    <Button Text="add new card" HorizontalOptions="EndAndExpand" TextColor="CornflowerBlue" BackgroundColor="Black" Margin="20,0"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="Black" BorderColor="Gray" Margin="10">
+                <StackLayout>
+                    <Label Text="UPI" TextColor="white" FontAttributes="Bold"/>
+                    <Label Text="No VPAs saved to be shown" TextColor="Gray" Margin="0,5"/>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="5" BackgroundColor="Black" BorderColor="Wheat" Margin="-10,0">
+                <Label Text="View transaction history" TextColor="Gray" FontSize="20" Margin="10,5"/>
+            </Frame>
+            <Frame Padding="5" Margin="-10,-8,-10,0" BackgroundColor="Black" BorderColor="Wheat" >
+                <Label Text="Help" TextColor="Gray" FontSize="20" Margin="10,5"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

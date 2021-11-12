@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cvm="clr-namespace:Fk_Clone.ViewModel"
+             x:Class="Fk_Clone.View.Credit"
+             Title="Flipkart Credit"
+             BackgroundColor="Black">
+    <ContentPage.BindingContext>
+        <cvm:CreditVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+            <StackLayout BackgroundColor="Black">
+                <CarouselView ItemsSource="{Binding Ccv}" Margin="0" HeightRequest="100">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal" BackgroundColor="#728FCE">
+                                <StackLayout BackgroundColor="#728FCE" >
+                                    <Label TextColor="Blue" FontSize="25" Text="{Binding title}" FontAttributes="Bold" Margin="5" />
+                                    <Label TextColor="Gold" Text="{Binding d1}" Margin="5,0" FontSize="18"/>
+                                    <Label TextColor="Gold" Text="{Binding d2}" Margin="5,0" FontSize="18"/>                                    
+                                </StackLayout>
+                                <Image Source="{Binding imgcv}" HorizontalOptions="CenterAndExpand"  WidthRequest="50"/>
+                            </StackLayout>                            
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <StackLayout >
+                    <Frame BackgroundColor="#2916F5" CornerRadius="20" Margin="25">
+                    <StackLayout >
+                        <Label Text="Fk Pay Later" FontAttributes="Bold" FontSize="25" TextColor="White"/>
+                        <Label Text="credit for all your shopping needs!" FontSize="19" TextColor="White"/>
+                        <Label Text="Instant Credit upto 70,000" TextColor="LightBlue" FontAttributes="Bold" FontSize="20" HorizontalOptions="CenterAndExpand" />
+                        <Label Text="Pay next Month or in 3/6/9/12 EMIs" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="Win an iPhone 12 /Gift card upto 15k" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="Upto 15% off on your first order" HorizontalOptions="CenterAndExpand"/>
+                        <Frame>
+                            <Label Text="Activate Now!" FontSize="20" TextColor="Black" BackgroundColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Padding="0,-5"/>
+                        </Frame>
+                        <Label Text="100% Safe and Secure" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                    <Frame BackgroundColor="Green" CornerRadius="20" Margin="25,0,25,10">
+                    <StackLayout>
+                        <Label Text="Avail EMI on Fk!" FontSize="25" TextColor="White" FontAttributes="Bold"/>
+                        <Label Text="Pay in installments over 3,6,9,12+ months" FontSize="16" TextColor="White"/>
+                        <Frame CornerRadius="10" Margin="5,10" BackgroundColor="Black">
+                            <StackLayout >
+                                <Label Text="No Cost EMI" TextColor="White" FontAttributes="Bold"/>
+                                <Label Text="Use EMI at no extra cost on leading bank's credit cards &amp; debit cards" TextColor="White"/>                                
+                                <Label Text="How does it work?" TextColor="CornflowerBlue" Margin="0,10" FontSize="19"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="icon.png" WidthRequest="30"/>
+                                    <StackLayout>
+                                        <Label Text="Avail No Cost Emis on" TextColor="White"/>
+                                        <Label Text="Bajaj Finserv Card" TextColor="White" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                    <Label Text=">" TextColor="White" HorizontalOptions="EndAndExpand" Margin="10,20,10,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="Black" CornerRadius="10" Margin="10">
+                            <StackLayout>
+                                <Label Text="Debit Card EMI &amp; partner offers" TextColor="White" FontAttributes="Bold"/>
+                                <Label Text="Enjoy a pre - approved credit line from our partners to shop on EMI" TextColor="White"/>                                
+                                <Label Text="How does it Work ?" TextColor="CornflowerBlue" Margin="0,10" FontSize="19"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+                    <Frame HorizontalOptions="CenterAndExpand" BackgroundColor="Black" BorderColor="White" Margin="0,0,0,12" Padding="10">
+                        <Label Text="Share Page" TextColor="white"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>        
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
